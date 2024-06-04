@@ -1,11 +1,11 @@
-#DivInfo{
+.DivInfo{
     display: flex;
     border: 1px solid gray;
     width: 1200px;
     height: 500px;
 
   }
-   #DivInfo2 div{
+  .DivInfo2 div{
     font-size: 20px;
    }
    .DivInfo2Div{
@@ -13,7 +13,7 @@
 
     span{padding-right: 50px;}
 
-    #Div11{
-      display: grid;
-      grid-template-columns: 30% 30% 30%;
-    }
+    .formtypefilm{
+      margin-top: 10px;
+      }
+      

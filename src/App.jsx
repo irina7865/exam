@@ -6,7 +6,8 @@ import { Films } from './Films/Films';
 import { Infofilms } from './InfoFilms/Infofilms';
 
 function App() {
-  const [film, setFilm] = useState()
+  
+  const [film, setFilm] = useState('index')
   const [dataS, setDataS] = useState([])
   console.log(dataS)
   function searchfunc(event){
@@ -40,8 +41,8 @@ function funcfilm(id){
   return (
   <div>
     <Search searchfunc = {searchfunc}/>
-    <Films dataS = {dataS} func={funcfilm} /> 
-    <Infofilms film = {film} />
+    <Films dataS = {dataS} func={funcfilm} />  
+     <Infofilms film = {film} />
   </div>
   
   );
