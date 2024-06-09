@@ -36,7 +36,7 @@ function funcfilm(id){
  fetchData(`http://www.omdbapi.com/?apikey=765c8b08&i=${id}`)
   .then((data) =>  setFilm(data))
   .catch((error) => console.error(error));
-  {setInfo(current => !current)}
+  {setInfo(true)}
 }
 
   return (
