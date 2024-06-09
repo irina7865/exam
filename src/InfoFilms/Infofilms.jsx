@@ -1,7 +1,7 @@
 import './Infofilm.css'
 
 export const Infofilms = ({film}) => {
-    return ( <div >   
+    return ( <div id='sok'>   
                  <h2>Film info:</h2>
              <div className="DivInfo" key={film.imdbID}>
               <img src={film.Poster}/>

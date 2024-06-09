@@ -6,8 +6,8 @@ import { Films } from './Films/Films';
 import { Infofilms } from './InfoFilms/Infofilms';
 
 function App() {
-  
-  const [film, setFilm] = useState('index')
+  const [info, setInfo] = useState(false)
+  const [film, setFilm] = useState([])
   const [dataS, setDataS] = useState([])
   console.log(dataS)
   function searchfunc(event){
@@ -33,16 +33,17 @@ function App() {
    
    
 function funcfilm(id){
-  fetchData(`http://www.omdbapi.com/?apikey=765c8b08&i=${id}`)
+ fetchData(`http://www.omdbapi.com/?apikey=765c8b08&i=${id}`)
   .then((data) =>  setFilm(data))
   .catch((error) => console.error(error));
+  {setInfo(current => !current)}
 }
 
   return (
   <div>
     <Search searchfunc = {searchfunc}/>
     <Films dataS = {dataS} func={funcfilm} />  
-     <Infofilms film = {film} />
+    {info && <Infofilms film = {film} />}
   </div>
   
   );
